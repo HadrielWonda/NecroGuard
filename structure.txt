@@ -1,0 +1,59 @@
+NecroGuard/
+├── src/
+│   ├── NecroGuard/
+│   │   ├── NecroGuard.csproj
+│   │   ├── Abstractions/
+│   │   │   ├── INecroGuard.cs
+│   │   │   ├── IScanner.cs
+│   │   │   ├── ISanitizer.cs
+│   │   │   └── Models/
+│   │   │       ├── ScanResult.cs
+│   │   │       ├── ThreatInfo.cs
+│   │   │       ├── ScanOptions.cs
+│   │   │       ├── ScanContext.cs
+│   │   │       └── ScanStatus.cs
+│   │   ├── Core/
+│   │   │   ├── NecroGuardService.cs
+│   │   │   ├── ScannerPipeline.cs
+│   │   │   ├── ScannerPipelineOptions.cs
+│   │   │   └── Extensions/
+│   │   │       └── StreamExtensions.cs
+│   │   ├── Scanners/
+│   │   │   ├── ImageScanner.cs
+│   │   │   ├── PdfScanner.cs
+│   │   │   ├── OfficeScanner.cs
+│   │   │   ├── TextScanner.cs
+│   │   │   └── MetadataScanner.cs
+│   │   ├── Sanitizers/
+│   │   │   ├── ImageSanitizer.cs
+│   │   │   ├── PdfSanitizer.cs
+│   │   │   ├── OfficeSanitizer.cs
+│   │   │   └── TextSanitizer.cs
+│   │   ├── Configuration/
+│   │   │   ├── NecroGuardOptions.cs
+│   │   │   └── ScannerRegistration.cs
+│   │   ├── Middleware/
+│   │   │   └── NecroGuardMiddleware.cs
+│   │   ├── DependencyInjection/
+│   │   │   └── ServiceCollectionExtensions.cs
+│   │   └── Resources/
+│   │       └── (optional resource files, e.g., homoglyph mappings)
+│   └── NecroGuard.Tests/
+│       ├── NecroGuard.Tests.csproj
+│       ├── UnitTests/
+│       │   ├── Scanners/
+│       │   │   ├── ImageScannerTests.cs
+│       │   │   ├── PdfScannerTests.cs
+│       │   │   └── ...
+│       │   └── Core/
+│       │       └── NecroGuardServiceTests.cs
+│       └── IntegrationTests/
+│           └── PipelineIntegrationTests.cs
+├── samples/
+│   └── NecroGuard.Demo/
+│       ├── NecroGuard.Demo.csproj
+│       ├── Program.cs
+│       └── appsettings.json
+├── docs/
+│   └── (documentation files)
+└── README.md
